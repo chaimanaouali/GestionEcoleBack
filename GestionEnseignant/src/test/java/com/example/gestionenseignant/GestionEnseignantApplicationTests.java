@@ -1,0 +1,13 @@
+package com.example.gestionenseignant;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class GestionEnseignantApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+
+}
