@@ -9,9 +9,13 @@
         <module name="GestionEnseignant" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Enseignant" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Enseignant" options="-parameters" />
       <module name="GestionEnseignant" options="-parameters" />
     </option>
   </component>

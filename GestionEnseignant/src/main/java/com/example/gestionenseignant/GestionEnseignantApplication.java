@@ -1,13 +1,25 @@
 package com.example.gestionenseignant;
 
+
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.Bean;
+
 
 @SpringBootApplication
-public class GestionEnseignantApplication {
+@EnableEurekaClient
 
-    public static void main(String[] args) {
+public class GestionEnseignantApplication {
+    public static void main(String[] args)
+    {
         SpringApplication.run(GestionEnseignantApplication.class, args);
     }
-
-}
+    @Bean
+    ApplicationRunner init() {
+        return args -> {
+            System.out.println("Spring Boot application started!");
+            // Your initialization logic goes here
+        };
+    }}

@@ -42,8 +42,7 @@ public class EnseignantService {
         { enseignantRepository.deleteById(id); return "Enseignant supprimé"; }
         else return "Enseignant non supprimé";
     }
-    public Page<Enseignant> searchEnseignantsByName(String nom, int page, int size) {
-        Pageable pageable = PageRequest.of(page, size, Sort.by("nom").ascending());
+    public Page<Enseignant> searchEnseignantsByName(String nom, Pageable pageable) {
         return enseignantRepository.findEnseignantsByName(nom, pageable);
     }
 }
